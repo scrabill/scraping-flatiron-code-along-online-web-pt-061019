@@ -23,7 +23,7 @@ class Scraper
     doc.css(".post").each do |post|
       course = Course.new
       binding.pry
-      course.title = get_courses.css("h2")
+      course.title = post.css("h2").text
       course.schedule
       course.description
     end
