@@ -30,6 +30,7 @@ class Scraper
   def make_courses
     get_courses.each do |course|
       new_course = Course.new
+      binding.pry
       new_course.title = get_courses.css("h2")
     end
   end
